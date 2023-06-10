@@ -120,7 +120,7 @@ def run_model(treeDic, x_test, x_train, droprate, lr, weight_decay, patience, n_
 def set_seed(seed=1):
     random.seed(seed)
     np.random.seed(seed)
-    th.manual_seed(seed)  # 随机种子，神经网络初始化参数是固定的，而不是变化
+    th.manual_seed(seed)
     th.cuda.manual_seed(seed)
     th.backends.cudnn.deterministic = True
     print("seed:", seed)
